@@ -1,0 +1,148 @@
+Activity 1
+
+USE PersonalTrainer;
+
+SELECT *
+FROM exercise;
+
+Activity 2
+
+USE PersonalTrainer;
+
+SELECT *
+FROM client;
+
+Activity 3
+
+USE PersonalTrainer;
+
+SELECT *
+FROM client
+WHERE City = 'Metairie';
+
+Activity 4
+
+USE PersonalTrainer;
+
+SELECT *
+FROM client
+WHERE ClientId = '818u7faf-7b4b-48a2-bf12-7a26c92de20c';
+
+Activity 5
+
+USE PersonalTrainer;
+
+SELECT *
+FROM goal;
+
+Activity 6
+
+USE PersonalTrainer;
+
+SELECT Name, LevelId
+FROM workout;
+
+Activity 7
+
+USE PersonalTrainer;
+
+SELECT Name, LevelId, Notes
+FROM workout
+WHERE LevelId = '2';
+
+Activity 8
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, City
+FROM Client
+WHERE City = 'Metairie' OR City = 'Kenner' OR City = 'Gretna';
+
+Activity 9
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, BirthDate
+FROM client
+WHERE BirthDate BETWEEN '1980-01-01' AND '1989-12-31';
+
+Activity 10
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, BirthDate
+FROM Client
+WHERE Birthdate LIKE '198%'
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, BirthDate
+FROM client
+WHERE BirthDate >= '1980-01-01' 
+AND BirthDate <= '1989-12-31';
+
+Activity 11
+
+USE PersonalTrainer;
+
+SELECT *
+FROM login
+WHERE EmailAddress LIKE '%.gov';
+
+Activity 12
+
+USE PersonalTrainer;
+
+SELECT *
+FROM Login
+WHERE EmailAddress NOT LIKE '%.com'
+
+Activity 13
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, BirthDate
+FROM Client
+WHERE Birthdate IS NULL
+
+Activity 14
+
+
+Activity 15
+
+USE PersonalTrainer;
+
+SELECT Name, Notes
+FROM workout
+WHERE notes LIKE '%you%'
+
+Activity 16
+
+USE PersonalTrainer;
+
+SELECT FirstName, LastName, City
+FROM Client
+WHERE City = 'LaPlace' AND (LastName LIKE 'L%' OR 'M%' OR 'N%')
+
+Activity 17
+
+USE PersonalTrainer;
+
+SELECT InvoiceID, Description, Price, Quantity, Price * Quantity AS line_item_total
+FROM InvoiceLineItem
+WHERE Price * Quantitiy BETWEEN 15 AND 25;
+
+Activity 18
+PART1
+USE PersonalTrainer;
+
+SELECT *
+FROM client
+WHERE FirstName LIKE '%ESTRELLA%';
+
+PART2
+USE PersonalTrainer;
+
+SELECT *
+FROM login
+WHERE ClienId LIKE '87976c42-9226-4bc6-8b32-23a8cd7869a5';
